@@ -5,10 +5,10 @@ namespace Fractions
     [TestClass]
     public class AddFractionsTests
     {
-        //[TestMethod]
-        //public void TestMethod1()
-        //{
-        //    Assert.AreEqual(1, 1);
-        //}
+        [TestMethod]
+        public void zero_plus_zero()
+        {
+            Assert.AreEqual(new Fraction(0), new Fraction(0));
+        }
     }
 }
