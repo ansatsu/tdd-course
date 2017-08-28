@@ -32,6 +32,13 @@ namespace Fractions
             var fraction = new Fraction(4).Plus(new Fraction(6));
             Assert.AreEqual(10, fraction.IntValue);
         }
+
+        [TestMethod]
+        public void negative_input_and_negative_output()
+        {
+            var fraction = new Fraction(-5).Plus(new Fraction(2));
+            Assert.AreEqual(-3, fraction.IntValue);
+        }
     }
 }
     
