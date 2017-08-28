@@ -1,18 +1,22 @@
-﻿namespace Fractions
-{
-    internal class Fraction
-    {
-        private int v;
+﻿using System;
 
-        public Fraction(int v)
+namespace Fractions
+{
+    public class Fraction
+    {
+        public int IntValue { get; }
+
+        public Fraction(int value)
         {
-            this.v = v;
+            IntValue = value;
         }
 
         public override bool Equals(object obj)
         {
             var o = obj as Fraction;
-            return o != null && o.v == this.v;
+            return o != null && o.IntValue == this.IntValue;
         }
+
+        public Fraction Plus(Fraction fraction) => new Fraction(IntValue + fraction.IntValue);
     }
 }
