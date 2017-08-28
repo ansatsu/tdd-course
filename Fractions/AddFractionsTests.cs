@@ -11,5 +11,12 @@ namespace Fractions
             var fraction = new Fraction(0).Plus(new Fraction(0));
             Assert.AreEqual(0, fraction.IntValue);
         }
+
+        [TestMethod]
+        public void zero_plus_nonzero()
+        {
+            var fraction = new Fraction(0).Plus(new Fraction(1));
+            Assert.AreEqual(1, fraction.IntValue);
+        }
     }
 }
