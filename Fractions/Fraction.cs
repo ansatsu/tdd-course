@@ -4,19 +4,27 @@ namespace Fractions
 {
     public class Fraction
     {
-        public int IntValue { get; }
+        public int Numerator { get; }
+        public int Denominator { get; }
 
-        public Fraction(int value)
+        public Fraction(int numerator)
         {
-            IntValue = value;
+            Numerator = numerator;
+            Denominator = 1;
+        }
+
+        public Fraction(int numerator, int denominator)
+        {
+            Numerator = numerator;
+            Denominator = denominator;
         }
 
         public override bool Equals(object obj)
         {
             var o = obj as Fraction;
-            return o != null && o.IntValue == this.IntValue;
+            return o != null && o.Numerator == this.Numerator;
         }
 
-        public Fraction Plus(Fraction fraction) => new Fraction(IntValue + fraction.IntValue);
+        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator);
     }
 }
