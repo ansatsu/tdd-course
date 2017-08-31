@@ -25,6 +25,6 @@ namespace Fractions
             return o != null && o.Numerator == this.Numerator;
         }
 
-        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator);
+        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator, Denominator);
     }
 }
