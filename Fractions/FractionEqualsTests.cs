@@ -25,5 +25,11 @@ namespace Fractions
         {
             Assert.AreNotEqual(new Fraction(4, 5), new Fraction(4, 8));
         }
+
+        [TestMethod]
+        public void whole_numbers_equals_the_same_fraction()
+        {
+            Assert.AreEqual(new Fraction(3, 1), new Fraction(3));
+        }
     }
 }
