@@ -8,10 +8,8 @@ namespace Fractions
         public int Denominator { get; }
 
         public Fraction(int numerator)
-        {
-            Numerator = numerator;
-            Denominator = 1;
-        }
+            : this(numerator, 1)
+        { }
 
         public Fraction(int numerator, int denominator)
         {
