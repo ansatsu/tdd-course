@@ -20,7 +20,10 @@ namespace Fractions
         public override bool Equals(object obj)
         {
             var o = obj as Fraction;
-            return o != null && o.Numerator == this.Numerator;
+            return
+                o != null &&
+                o.Numerator == this.Numerator &&
+                o.Denominator == this.Denominator;
         }
 
         public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator, Denominator);
