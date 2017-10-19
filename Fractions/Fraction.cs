@@ -14,7 +14,13 @@
             Numerator = numerator;
             Denominator = denominator;
         }
-        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator, Denominator);
+        public Fraction Plus(Fraction that)
+        {
+            if (this.Denominator != that.Denominator)
+                return new Fraction(this.Numerator * that.Denominator + that.Numerator * this.Denominator);
+            
+            return new Fraction(this.Numerator + that.Numerator, this.Denominator);
+        }
 
         public override bool Equals(object obj)
         {
@@ -28,5 +34,7 @@
         {
             return (Numerator * 397) ^ Denominator;
         }
+
+        public override string ToString() => $"{Numerator}/{Denominator}";
     }
 }

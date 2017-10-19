@@ -21,8 +21,9 @@ namespace Fractions
         public void different_denominators()
         {
             Assert.AreNotEqual(new Fraction(4, 5), new Fraction(4, 8));
+            Assert.AreEqual(new Fraction(5, 6), new Fraction(1, 2).Plus(new Fraction(1, 3)));
         }
-
+        
         [TestMethod]
         public void whole_numbers_equals_the_same_fraction()
         {
@@ -34,11 +35,12 @@ namespace Fractions
         {
             Assert.AreNotEqual(new Fraction(2), new Fraction(3));
         }
-
+        
         //[TestMethod]
         //public void reduces()
         //{
         //    Assert.AreEqual(new Fraction(2, 3), new Fraction(4, 6));
         //}
+        
     }
 }
