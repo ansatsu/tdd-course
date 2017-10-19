@@ -20,8 +20,8 @@
         {
             return
                 obj is Fraction o &&
-                o.Numerator == this.Numerator &&
-                o.Denominator == this.Denominator;
+                o.Numerator == Numerator &&
+                o.Denominator == Denominator;
         }
 
         public override int GetHashCode()
