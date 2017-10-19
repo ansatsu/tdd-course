@@ -9,7 +9,7 @@ namespace Fractions
         public void zero_plus_zero()
         {
             var fraction = new Fraction(0).Plus(new Fraction(0));
-            Assert.AreEqual(0, fraction.Numerator);
+            Assert.AreEqual(new Fraction(0), fraction);
         }
 
         [TestMethod]

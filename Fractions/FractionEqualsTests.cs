@@ -1,7 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Fractions
 {
@@ -31,5 +28,17 @@ namespace Fractions
         {
             Assert.AreEqual(new Fraction(3, 1), new Fraction(3));
         }
+
+        [TestMethod]
+        public void different_whole_numbers_do_not_equal_each_other()
+        {
+            Assert.AreNotEqual(new Fraction(2), new Fraction(3));
+        }
+
+        //[TestMethod]
+        //public void reduces()
+        //{
+        //    Assert.AreEqual(new Fraction(2, 3), new Fraction(4, 6));
+        //}
     }
 }

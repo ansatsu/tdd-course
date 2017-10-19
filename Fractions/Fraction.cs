@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Fractions
+﻿namespace Fractions
 {
     public class Fraction
     {
@@ -16,16 +14,19 @@ namespace Fractions
             Numerator = numerator;
             Denominator = denominator;
         }
+        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator, Denominator);
 
         public override bool Equals(object obj)
         {
-            var o = obj as Fraction;
             return
-                o != null &&
+                obj is Fraction o &&
                 o.Numerator == this.Numerator &&
                 o.Denominator == this.Denominator;
         }
 
-        public Fraction Plus(Fraction fraction) => new Fraction(Numerator + fraction.Numerator, Denominator);
+        public override int GetHashCode()
+        {
+            return (Numerator * 397) ^ Denominator;
+        }
     }
 }
