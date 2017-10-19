@@ -17,7 +17,7 @@
         public Fraction Plus(Fraction that)
         {
             if (this.Denominator != that.Denominator)
-                return new Fraction(this.Numerator * that.Denominator + that.Numerator * this.Denominator);
+                return new Fraction(this.Numerator * that.Denominator + that.Numerator * this.Denominator, this.Denominator * that.Denominator);
             
             return new Fraction(this.Numerator + that.Numerator, this.Denominator);
         }
